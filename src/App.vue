@@ -1,28 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <Cabecalho />
+      <v-container fluid class="mt-5">
+        <v-row justify="center" align="center">
+          <v-col class="text-center items-center">
+            <Home />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+    <v-footer class="text-center pa-8" style="background: #d71c23">
+      <v-row justify="center" align="center">
+        <v-col class="text-center items-center">
+          <h3 class="white--text">
+            Diego Chaves - Guilherme de Sá - Alessandra Oliveira - Lucas
+            Ferreira
+          </h3>
+        </v-col>
+      </v-row>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Cabecalho from "./components/Cabecalho";
+import Home from "./components/Home";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "App",
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+  components: {
+    Cabecalho,
+    Home,
+  },
+
+  data: () => ({
+    //
+  }),
+};
+</script>
